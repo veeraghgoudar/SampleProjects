@@ -1,0 +1,26 @@
+
+<!--
+<h1>{{studentmessage}}</h1>
+
+<ul>
+	<li ng-repeat="student in studentList">
+		
+		<a href="#/students/{{student.id}}">{{student.firstName}}
+		</a>
+	</li>
+</ul>
+-->
+
+
+<!-- USING UI ROUTER -->
+
+
+<h1>{{studentmessage}}</h1>
+
+<ul>
+	<li ng-repeat="student in studentList">
+		
+		<a ui-sref="#/studentDetails({id:student.id})">{{student.firstName}}
+		</a>
+	</li>
+</ul>

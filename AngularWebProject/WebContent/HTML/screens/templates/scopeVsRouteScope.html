@@ -1,0 +1,20 @@
+
+<h1>$Scope Vs $routeScope</h1>
+
+<h3>First div controller</h3>
+<div ng-controller="redColor as RedColorCTRL">
+		
+	RedColorCTRL Value - 	{{RedColorCTRL.color}} <br>
+	$rootScope Value - 	{{color}} <br>
+	//GreenColorCTRL Value - 	{{GreenColorCTRL.color}}
+	GreenColorCTRL Value - 	<span style="color:red" ng-show="GreenColorCTRL.color == undefined" >GreenColorCTRL.color is undefined</span>
+
+</div>
+<h3>Second div controller</h3>
+<div ng-controller="greenColor as GreenColorCTRL">
+		
+	GreenColorCTRL Value - 	{{GreenColorCTRL.color}}<br>
+	$rootScope Value - 	{{color}} <br>
+   // RedColorCTRL Value - 	{{RedColorCTRL.color}} 
+	RedColorCTRL Value - 	<span style="color:red" ng-show="RedColorCTRL == undefined" >RedColorCTRL.color is undefined</span>
+</div>

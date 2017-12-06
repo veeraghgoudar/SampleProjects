@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- 
+<html ng-app="Demo">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+		
+			
+		<link rel="stylesheet" type="text/css" href="HTML/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="HTML/css/styleSheet1.css"/>
+
+		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>  
+		
+
+		<script src="HTML/scripts/script.js"></script>
+		<script src="HTML/scripts/filter.js"></script>
+		<script src="HTML/scripts/services.js"></script>
+		
+		
+</head>
+<body>
+
+
+	<table>
+		<tr>
+			<td colspan="2" class="header">
+				<h1>
+					Angular Application Demo 
+				</h1>
+			</td>
+		</tr>
+		
+		<tr>
+				<td class="leftMenu">
+						Links
+					<a href="#/home">Home</a>
+					<a href="#/courses">Courses</a>
+					<a href="#/students">Students</a>
+					<a href="#/service">Math Services</a>
+					<a href="#/geography">Geography</a>
+					<a href="#/inlineHtml">Inline HTML</a>
+					<a href="#/scope">$scope vs $routeScope</a>
+				</td>
+				<td class="mainContent">
+					<ng-view></ng-view>
+				</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="footer">
+				<b>Website Footer</b>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+ -->
+ 
+ 
+ <!-- Using ui-router instead of ng-route. This is 3rd party -->
+ 
+ <html ng-app="Demo">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+		
+			
+		<link rel="stylesheet" type="text/css" href="HTML/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="HTML/css/styleSheet1.css"/>
+
+		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<!-- <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>  -->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+		<script src="HTML/scripts/uiRouterScript.js"></script>
+		<script src="HTML/scripts/filter.js"></script>
+		<script src="HTML/scripts/services.js"></script>
+		
+		
+</head>
+<body>
+
+
+	<table>
+		<tr>
+			<td colspan="2" class="header">
+				<h1>
+					Angular Application Demo 
+				</h1>
+			</td>
+		</tr>
+		
+		<tr>
+				<td class="leftMenu">
+						Links
+					<a ui-sref="#/home">Home</a>
+					<a ui-sref="#/courses">Courses</a>
+					<a ui-sref="#/students">Students</a>
+					<a ui-sref="#/service">Math Services</a>
+					<a ui-sref="#/geography">Geography</a>
+					<a ui-sref="#/inlineHtml">Inline HTML</a>
+					<a ui-sref="#/scope">$scope vs $routeScope</a>
+					<a ui-sref="#/uirouter">Ui-router</a>
+				</td>
+				<td class="mainContent">
+					<ui-view></ui-view>
+				</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="footer">
+				<b>Website Footer</b>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+		

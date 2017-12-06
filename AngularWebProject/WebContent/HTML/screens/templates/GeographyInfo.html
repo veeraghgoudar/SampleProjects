@@ -1,0 +1,16 @@
+
+<h3>{{geoCtrl.message}}</h3>
+
+<div ng-controller="country as country">
+	{{country.name}}
+	<div ng-controller="states as states">
+			{{country.name}}--{{states.name}}
+		<div ng-controller="city as city">
+				{{country.name}}--{{states.name}}---{{city.name}}
+		
+		
+		</div>
+	
+	</div>
+
+</div>
