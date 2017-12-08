@@ -1,0 +1,45 @@
+apply plugin: 'eclipse-wtp'
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility='1.7'
+targetCompatibility='1.7'
+
+webAppDirName = 'WebContent'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+ 	compile 'commons-io:commons-io:2.4'
+ 	compile 'commons-fileupload:commons-fileupload:1.3.1'
+ 	compile 'org.springframework:spring-context:4.2.5.RELEASE'
+    compile 'org.springframework:spring-web:4.2.5.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.2.5.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.0.4.RELEASE'
+	compile 'org.springframework.security:spring-security-config:4.0.4.RELEASE'
+	compile 'org.springframework.security:spring-security-core:4.0.4.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'org.hibernate:hibernate-validator:5.1.3.Final'
+    compile 'commons-lang:commons-lang:2.3'
+    compile 'org.apache.commons:commons-math:2.0'
+    compile 'commons-collections:commons-collections:3.0'
+ 	compile 'org.slf4j:slf4j-api:1.7.12'
+ 	compile 'org.slf4j:slf4j-log4j12:1.7.13'	
+    compile 'log4j:log4j:1.2.17'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'commons-net:commons-net:3.3'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'org.postgresql:postgresql:9.4-1205-jdbc4'
+    compile 'javax.servlet.jsp.jstl:jstl-api:1.2'
+    compile 'jstl:jstl:1.2'
+    compile 'com.jcraft:jsch:0.1.53'
+    compile 'net.sf.ehcache:ehcache:2.10.2'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+    compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
+ 	compile 'org.springframework:spring-context-support:4.2.5.RELEASE'
+ 	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '4.1.0.RELEASE'
+ 	compile group: 'org.json', name: 'json', version: '20090211'
+}
