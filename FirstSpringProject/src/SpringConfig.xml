@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!--  Example of setting a property through XML file
+    <bean id="restaurantBean" class="org.musigma.mumix.Restaurant">
+   	<property name="welcomeNote" value="Welcome to first Spring Project"></property> 
+   </bean>
+    -->
+  <!--   Example of DI using constructor
+  	The tea class object is INJECTED into a Restaurant class through a constructor 
+    <bean id="restaurantBean" class="org.musigma.mumix.Restaurant">
+   	<constructor-arg ref="teaBean"></constructor-arg>
+   </bean>
+    -->
+  <!--   Example of DI using setter 
+  		property name="hotDrink" - This will find out the hotDrink property in the Restaurant Class &
+  		using its setter method it should provide ref="teaBean" value to it. This is nothing but the tea class object
+    <bean id="restaurantBean" class="org.musigma.mumix.Restaurant">
+    	<property name="hotDrink" ref="teaBean"></property>
+   </bean>
+   -->
+
+	<!-- How to provide value of a JAVA COLLECTION from spring's configuration 
+		file ? Java core interfaces - Set, List and Map Also, using init and destroy 
+		methods Usually spring loads all the singleton classes when applicationContext 
+		is created. If you do not want to load all of these singleton class then 
+		set the property of lazy-init =true. -->
+   
+   <!-- <bean id="restaurantBean" class="org.musigma.mumix.Restaurant" init-method="init" destroy-method="destroy" lazy-init="true">
+    	<property name="restaurantWaitersList">
+    		<list>
+    			<value>Mr A</value>
+    			<value>Mr B</value>
+    			<value>Mr C</value>
+    			<value>Mr D</value>
+    			<value>Mr E</value>
+    		</list>
+    	
+    	</property>
+    	</bean>
+    	
+    	 -->     
+	  <!-- 
+	  		<bean id="restaurantBean" class="org.musigma.mumix.Restaurant">
+		    	<property name="restaurantWaitersList">
+		    		<list>
+		    			<value>Mr A</value>
+		    			<value>Mr B</value>
+		    			<value>Mr C</value>
+		    			<value>Mr D</value>
+		    			<value>Mr E</value>
+		    		</list>
+		    	</property>
+	   		 </bean>
+	  -->
+	    <!--  Using interfaces to call init and destroy method  
+	   <bean id="restaurantBean" class="org.musigma.mumix.Restaurant" lazy-init="true">
+		    	<property name="restaurantWaitersList">
+		    		<list>
+		    			<value>Mr A</value>
+		    			<value>Mr B</value>
+		    			<value>Mr C</value>
+		    			<value>Mr D</value>
+		    			<value>Mr E</value>
+		    		</list>
+		    	</property>
+	   		 </bean>
+	   <bean id="teaBean" class="org.musigma.mumix.Tea"></bean>
+	   
+	   <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor">
+	  	</bean>
+	  	
+  --> 
+<!--  Calling  multiple post bean processor classes with implementation of order-->		 
+		   <bean id="restaurantBean" class="org.musigma.mumix.Restaurant" lazy-init="true">
+			<property name="restaurantWaitersList">
+				<list>
+					<value>Mr A</value>
+					<value>Mr B</value>
+					<value>Mr C</value>
+					<value>Mr D</value>
+					<value>Mr E</value>
+				</list>
+			</property>
+		</bean>
+			<bean id="teaBean" class="org.musigma.mumix.Tea"></bean>
+			<bean class="org.musigma.mumix.DemoBeanPostProcessor1"></bean>
+			<bean class="org.musigma.mumix.DemoBeanPostProcessor2"></bean>
+
+		</beans>	

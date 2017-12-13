@@ -1,0 +1,23 @@
+{
+  "name": "expressproject",
+  "version": "17.1.1",
+  "description": "Sample Demo project",
+  "main": "mainFile.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongoose": "^4.11.1",
+    "nodemon": "^1.11.0",
+    "vis": "^4.20.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Veeragh Goudar",
+  "license": "ISC"
+}
